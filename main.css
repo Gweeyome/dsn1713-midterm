@@ -1,24 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Sarala:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900&family=Sarala:wght@400;700&display=swap');
 
-/* Set custom variables here */
+:root {
+  --body-bg: #F6F3ED;
+  --bs-primary: #2e483a;
+  --navbar-font-color: #A1ACA6;
+  --bs-light: #f6f3ed;
+}
+
+
+.btn-primary {
+  background-color: #2e483a !important;
+  border-color: #2e483a !important;
+  color: #f6f3ed !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #264031 !important;
+  border-color: #264031 !important;
+}
 
 
 
+.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
 
+.text-light {
+  color: var(--bs-light) !important;
+}
+
+
+.navbar {
+  background-color: var(--bs-primary) !important;
+}
 
 .navbar-brand {
   color: #F6F3ED;
 }
 
-body {
-  font-family: "Sarala", sans-serif;
-}
-
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Merriweather", serif;
 }
 
+body {
+  font-family: "Sarala", sans-serif;
+  background-color: var(--body-bg);
+}
+
+.accordion-button {
+  background-color: #F6F3ED;
+  color: #2e483a;
+  border: none;
+  box-shadow: none;
+}
+
+.accordion-button.collapsed {
+  background-color: #F6F3ED;
+  color: #2e483a;
+}
+
+.accordion-body {
+  background-color: #F6F3ED;
+}
+
+
 #hero {
+  padding-top: 20px;
   height: 800px;
   background-color: #E4E6DB;
   background-image: url(../images/hero-bg-img.png);
@@ -27,11 +77,16 @@ h1, h2, h3 {
   background-size: cover;
 }
 
+#hero .container {
+  margin-top: -30px;
+}
+
 #hero .d-flex {
   height: 800px;
 }
 
 #cta {
+  height: 500px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/cta-bg.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -42,12 +97,18 @@ h1, h2, h3 {
   height: 400px;
 }
 
-section:not(#hero):not(#cta){
+.footer {
+  background-color: var(--bs-primary) !important;
+  color: var(--bs-light) !important;
+  padding: 20px 0;
+}
+
+section:not(#hero):not(#cta) {
   padding: 60px 0;
 }
 
-@media(min-width: 993px){
-  section:not(#hero):not(#cta){
+@media (min-width: 993px) {
+  section:not(#hero):not(#cta) {
     padding: 100px 0;
   }
 }
